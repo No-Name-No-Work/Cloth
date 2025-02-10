@@ -9,6 +9,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       width: 90%;
       margin: 0 auto;
       height: 90vh;
@@ -38,15 +39,30 @@
     .alert-container a:hover {
       background-color: #0056b3;
     }
+    #timer-container{
+  font-size: 40px;
+  font-family: 'Courier New', Courier, monospace;
+    }
   </style>
 </head>
 <body>
 
-  <div class="alert-container">
+  <div class="alert-container" id="main">
     <h3>SSL Certificate Expiration</h3>
-    <p>Your SSL certificate will expire in the next 33 hours. Please check your email at <strong>sul******@g**il.com</strong> for further instructions.</p>
+    <p>Your SSL certificate will expire in the next 48 hours. Please check your email at <strong>sul******@g**il.com</strong> for further instructions.</p>
     <a href="main.html">Go HTTP</a>
   </div>
+  <div id="expired" class="alert-container" style="display: none;">
+    <h1>Your Hosting has expired. Buy now to Access this site!</h1>
+    <a href="https://www.hostinger.pk/web-hosting#pricing" target="_blank">Buy Now</a>
+  </div>
+  <div id="timer-container">
+    <div class="warning" id="timer-warning"></div>
+    <div id="countdown" class="timer"></div>
+  </div>
+
+
+  <script src="script.js"></script>
 
 </body>
 </html>
