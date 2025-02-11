@@ -5,7 +5,7 @@ if (!expiryTime) {
   localStorage.setItem("expiryTime", expiryTime);
 }
 
-// Start the countdown
+
 let countdownInterval = setInterval(function() {
   let now = new Date().getTime();
   let timeLeft = expiryTime - now;
